@@ -8,6 +8,11 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const newObject = Object.fromEntries(
+    Object.entries(obj).map(([key, value]) => [key, value.trim()])
+  )
+  console.log(newObject)
+  return newObject
 }
 
 /**
@@ -20,6 +25,9 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  return Object.fromEntries(
+    Object.entries(obj).map(([key, value]) => [key, value.trim()])
+  )
 }
 
 /**
@@ -32,8 +40,16 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  let result = 0
+  integers.map( obj => { 
+    console.log(obj.integer)
+    obj.integer > result 
+    ? result = obj.integer
+    : result = result
+  })
+  return result
 }
-
+findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }])
 class Counter {
   /**
    * [Exercise 4A] Counter creates a counter
@@ -41,6 +57,7 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.count = initialNumber
   }
 
   /**
@@ -57,6 +74,10 @@ class Counter {
    */
   countDown() {
     // ✨ implement
+    this.count > 0 
+    ? this.count--
+    : this.count = 0
+    return this.count
   }
 }
 
