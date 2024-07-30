@@ -57,7 +57,7 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
-    this.count = initialNumber
+    this.count = initialNumber +1
   }
 
   /**

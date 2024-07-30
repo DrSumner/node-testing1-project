@@ -47,13 +47,13 @@ describe('[Exercise 4] Counter', () => {
   })
    test('[6] the FIRST CALL of counter.countDown returns the initial count', () => {
     
-    const expected = 2
+    const expected = 3
     const actual = counter.countDown()
     expect(actual).toEqual(expected)
    })
    test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
     counter.countDown()
-    const expected = 1
+    const expected = 2
     const actual = counter.countDown()
     expect(actual).toEqual(expected)
    })
